@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" type="image/png" href="images\facivon.ico" sizes="16x16" />
+  <title>AI Smart Assistant Project</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #f4f6f8;
+      color: #333;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: url("images/index_background.jpg") center center/cover no-repeat fixed;
+      opacity: 0.3;
+    }
+
+    .section {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      transition: all 0.8s ease-out;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .content {
+      background: #ffffff;
+      padding: 2.5rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      /* border: 5px solid #0000; */
+      border: solid;
+      border-width: 2px;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 1rem;
+      color: #2c3e50;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: #3498db;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      color: #7f8c8d;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    table {
+      width: 80%;
+      margin: 2rem auto;
+      border-collapse: collapse;
+    }
+
+    table, th, td {
+      border: 1px solid #bdc3c7;
+    }
+
+    th, td {
+      padding: 1rem;
+      text-align: left;
+    }
+
+    th {
+      background-color: #3498db;
+      color: white;
+    }
+
+    iframe {
+      margin-top: 1rem;
+      border-radius: 8px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 1rem;
+    }
+
+    .my_name {
+      font-size: 1.7rem;
+      font-family: Monotype Corsiva;
+      color: red;
+    }
+
+    .main_slides_img_link {
+        font-size: 30px;
+    }
+
+    .additional_slides_img_link {
+        font-size: 30px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <div class="section">
+    <div class="content">
+      <h1>AI Smart Assistant</h1>
+      <h2>Face Recognition | Voice Activation | GenAI-powered Responses</h2>
+      <div>
+        <p class="my_name">Developed by Jon Spahiu (an AI Passionate Student)</p>
+      </div>      
+      <img src="images/Architecture.png" alt="Project Architecture">
+      <p class="small">Scroll down to explore the project details.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <h2>Project Overview</h2>
+      <p>Welcome Innovator Expo visitors!</p>
+      <p>This AI Smart Assistant uses cutting-edge technologies including face recognition, speech-to-text, retrieval-augmented generation (RAG), and OpenAI’s GPT models to create a secure, intelligent assistant experience.</p>
+      <h3 class="highlight">--------- Core Features ---------</h3>
+      <ul style="text-align: left; margin-top: 1rem;">
+        <li>Face Detection and Authentication</li>
+        <li>Voice Activation and Speech Recognition</li>
+        <li>Dynamic Answer Generation with RAG and ChatGPT</li>
+        <li>Real-time Text-to-Speech Response</li>
+      </ul>
+      <hr style="margin: 2rem 0;">
+      <h4>Keep scrolling for:</h4>
+      <p>- Full Project Explanation</p>
+      <p>- Demonstration Video</p>
+      <p>- Presentation Slides</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <h2>Technical Breakdown</h2>
+      
+      <h3 class="highlight">--------- Development Language ---------</h3>
+      <p>100% built in <strong>Python</strong> — the world's leading language for AI and machine learning projects.</p>
+
+      <h3 class="highlight">--------- Why Python? ---------</h3>
+      <ul style="text-align: left;">
+        <li>Beginner-friendly and versatile</li>
+        <li>Industry-standard for AI development</li>
+        <li>Massive ecosystem of AI libraries and frameworks</li>
+      </ul>
+
+      <h3 class="highlight">--------- Project Workflow ---------</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Step</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Detect known faces and activate the microphone securely</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Convert user speech into text input</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Query vector database (FAISS) using RAG for relevant information</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Generate accurate responses using OpenAI's GPT models</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>Convert the response back into speech for the user</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="highlight">--------- Challenges & Solutions ---------</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Solution</th>
+            <th>Libraries/Tools</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Face Recognition</td>
+            <td>Leveraged facial recognition libraries and integrated with a Pygame visualization window.</td>
+            <td>face_recognition, Pygame</td>
+          </tr>
+          <tr>
+            <td>Speech Recognition</td>
+            <td>Used Google's Speech Recognition API and pyttsx3 for text-to-speech output.</td>
+            <td>SpeechRecognition, Pyttsx3</td>
+          </tr>
+          
+          <tr>
+            <td>Vector Database</td>
+            <td>Used Embeddings to convert text to numbers which is sent to Vector Database to compare numbers for accurate results</td>
+            <td>LangChain, Vector, Embeddings</td>
+          </tr>
+
+        <tr>
+                <td>FAISS</td>
+                <td>Utilized FAISS for vector database queries to enhance response accuracy.</td>
+                <td>Meta FAISS, LangChain</td>
+          <tr>
+            <td>Query and Response</td>
+            <td>Integrated OpenAI GPT models with RAG to produce context-aware answers.</td>
+            <td>OpenAI API, LangChain (LLM + RAG)</td>
+          </tr>
+          <tr>
+            <td>Multithreading</td>
+            <td>Implemented multithreading to ensure simultaneous process management.</td>
+            <td>Python Threading</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="highlight">--------- Key Concepts ---------</h3>
+      <p><strong>LLM (Large Language Model):</strong> AI models trained on massive datasets to generate human-like text (e.g., ChatGPT).</p>
+      <p><strong>RAG (Retrieval-Augmented Generation):</strong> Combines LLMs with external databases to provide highly accurate, customized answers.</p>
+
+      <h3 class="highlight">--------- Project Snapshots ---------</h3>
+      <div>
+        <img src="images/code.png" alt="Code Sample">
+        <img src="images/face.png" alt="Face Detection Demo">
+        <img src="images/response.png" alt="Response Generation">
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+      <h2>Project Demonstration</h2>
+      <p>See the AI Assistant in action!</p>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/FGnG9Wle4dQ" frameborder="0" allowfullscreen></iframe>
+      <p>Or <a href="https://www.youtube.com/watch?v=FGnG9Wle4dQ" target="_blank">click here</a> to watch the full video.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+        <h2>Canva Slides</h2>
+        <p>If you want to see the slides used in the Expo, you are in the right place!</p>
+        <div class="main_slides_img_link">
+            
+            <iframe src="https://www.canva.com/design/DAGlOXqe0WU/KG46Kmc4AN2ZIXdmv6ex1Q/view?embed" 
+            width="800" height="600" 
+            frameborder="0" 
+            allowfullscreen="allowfullscreen">
+            </iframe>
+            <center><a href="https://www.canva.com/design/DAGlOXqe0WU/kAbnAQBclbBnOUDYzO9AEw/view?utm_content=DAGlOXqe0WU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h6bc99cae55">Main Slides</a></center>
+        </div>
+
+        <div class="additional_slides_img_link">
+            <iframe src="https://www.canva.com/design/DAGk70pyjdc/eTClerzwtyTWjv_DpRV57Q/view?embed" width="800" height="600" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+
+            <center><a href="https://slidamanas.my.canva.site/">Additional Slides</a></center>
+        </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="content">
+            <h2>Feedback</h2>
+            
+            <h2>Fill Out The Google Form! It's complete anonymous!</h2>
+        
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc4pncdNzpzp3FeUQmhs_90lbUXWejKuxZo3SxXqJpLDYc8Sg/viewform?usp=header" width="700px", height="500px"></iframe>
+            
+            <div style="font-size: 50px;">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSc4pncdNzpzp3FeUQmhs_90lbUXWejKuxZo3SxXqJpLDYc8Sg/viewform?usp=header">Google Form Link</a>
+            </div>
+        
+            </div>
+        </div>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const reveal = () => {
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+  </script>
+
+</body>
+</html>

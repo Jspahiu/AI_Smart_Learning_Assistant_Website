@@ -1,0 +1,459 @@
+html, body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    text-align: center;
+    
+    height: 100%; /* Ensures the body takes up the full viewport height */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    
+}
+body>div.index{
+
+    position: relative;
+    z-index: 1;
+}
+
+body>div.index:before {
+    
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url("images/index_background.jpg") center center;
+    background-attachment: fixed;
+    opacity: .4;
+}
+
+body div.about_project{
+
+    background-image: url("images/ai_background_4.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* opacity: 0.5; */
+    padding: 10px;
+}
+
+body div.options_tab{
+
+    background-image: url("images/ai_background_3.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* opacity: 0.5; */
+    padding: 10px;
+}
+
+body div.canva_slides_background{
+
+    background-image: url("images/ai_background.png");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* opacity: 0.5; */
+    padding: 10px;
+}
+
+body div.project_video{
+
+    background-image: url("images/index_background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* opacity: 0.5; */
+    padding: 10px;
+}
+
+body div.feedback{
+
+    background-image: url("images/ai_background_2.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    /* opacity: 0.5; */
+    padding: 10px;
+}
+
+
+/* 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("images/index_background.jpg");
+    background-size: cover;
+    
+    background-attachment: fixed;
+    background-position: center;
+    opacity: 0.9;
+    z-index: -1;
+} 
+*/
+
+/* Background animation */
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+
+/* .main_title {
+    font-size: 80px;
+} */
+
+.description_title {
+    font-size: 20px;
+    font-style: italic;
+    color: red;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.description_title:hover {
+    color: rgb(221, 236, 11);
+    text-transform: uppercase;
+}
+
+.main_title {
+    font-size: 90px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, red, blue, green, yellow);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorShift 3s infinite alternate;
+}
+
+.main_title_options_tab {
+    font-size: 90px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, red, blue, green, yellow);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorShift 3s infinite alternate;
+    margin-bottom: 50px;
+}
+
+@keyframes colorShift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+.welcome_message {
+    font-size: 30px;
+    margin-bottom: 100px;
+}
+
+
+/* OTHER TABS BUTTON */
+
+
+.cool-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: 3px solid black; /* Black border added */
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.cool-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+
+.cool-button:active {
+    transform: scale(0.95);
+}
+
+
+.cool-button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+    transition: 0.6s ease;
+}
+
+.cool-button:hover::before {
+    top: 0%;
+    left: 0%;
+}
+
+
+
+
+.home_page_button {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: 3px solid black; /* Black border added */
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.home_page_button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+
+.home_page_button:active {
+    transform: scale(0.95);
+}
+
+
+.home_page_button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+    transition: 0.6s ease;
+}
+
+.home_page_button:hover::before {
+    top: 0%;
+    left: 0%;
+}
+
+
+
+.about_project_button {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: 3px solid black; /* Black border added */
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.about_project_button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+
+.about_project_button:active {
+    transform: scale(0.95);
+}
+
+
+.about_project_button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+    transition: 0.6s ease;
+}
+
+.about_project_button:hover::before {
+    top: 0%;
+    left: 0%;
+}
+
+
+.canva_slides {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: 3px solid black; /* Black border added */
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.canva_slides:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+
+.canva_slides:active {
+    transform: scale(0.95);
+}
+
+
+.canva_slides::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+    transition: 0.6s ease;
+}
+
+.canva_slides:hover::before {
+    top: 0%;
+    left: 0%;
+}
+
+
+.project_video_button {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: 3px solid black; /* Black border added */
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.project_video_button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+
+.project_video_button:active {
+    transform: scale(0.95);
+}
+
+
+.project_video_button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+    transition: 0.6s ease;
+}
+
+.project_video_button:hover::before {
+    top: 0%;
+    left: 0%;
+}
+
+
+.other_tabs_button {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: 3px solid black; /* Black border added */
+    padding: 15px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 15px rgba(255, 75, 43, 0.5);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 50px;
+}
+
+
+.other_tabs_button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 20px rgba(255, 75, 43, 0.8);
+}
+
+
+.other_tabs_button:active {
+    transform: scale(0.95);
+}
+
+
+.other_tabs_button::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, transparent 80%);
+    transition: 0.6s ease;
+}
+
+.other_tabs_button:hover::before {
+    top: 0%;
+    left: 0%;
+}
+
+/* Button Container: Stacks buttons vertically */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adds space between buttons */
+    align-items: center;
+}
+
+.description_title_slides {
+    font-size: 25px;
+    gap: 10px;
+}
+
+.main_slides_img_link {
+    font-size: 30px;
+}
+
+.additional_slides_img_link {
+    font-size: 30px;
+}
+
+.problems_faced_description {
+    font-size: 25px;
+}
