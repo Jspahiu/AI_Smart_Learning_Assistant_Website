@@ -1,5 +1,5 @@
 # AI Smart Learning Assistant with OPENAI Chatbot with Face Detection & Voice Interaction  
-# https://github.com/Jspahiu/AI-Smart-Learning-Assistant.git
+# https://github.com/Jspahiu/AI-Smart-Learning-Assistant
 
 # PROJECT WEBSITE REPO!!!!!!!!!!!!!!
 
